@@ -3,10 +3,9 @@ main = "src/index.ts"
 compatibility_date = "2024-10-22"
 compatibility_flags = ["nodejs_compat"]
 
-routes = [
-  { pattern = "x401.tech/*", zone_name = "x401.tech" },
-  { pattern = "auth.x401.tech/*", zone_name = "x401.tech" }
-]
-
 [vars]
 ENVIRONMENT = "production"
+
+[observability.logs]
+enabled = false
+invocation_logs = true
