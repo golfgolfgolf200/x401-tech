@@ -55,7 +55,7 @@ app.get("/", (c) => {
     </div>
 
     <div class="community-box">
-      To contribute to a better trust environment, visit <a href="https://401frameworks.org" target="_blank" rel="noreferrer">401frameworks.org</a> to collaborate on open RFC standards.
+      To contribute to improving the trust relationship between agentic servers and agentic agents, visit <a href="https://401frameworks.org" target="_blank" rel="noreferrer">401frameworks.org</a> to collaborate on open RFC standards.
     </div>
 
     <div class="grid">
