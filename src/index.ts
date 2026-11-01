@@ -49,7 +49,7 @@ app.get("/", (c) => {
 <body>
   <div class="container">
     <div class="hero">
-      <h1>x401 Technologies</h1>
+      <h1>x401.tech</h1>
       <div class="tagline">Production-grade cryptographic boundaries, gateways, and reverse proxies for autonomous AI agents.</div>
       <span class="badge">Commercial Infrastructure & Developer Tools</span>
     </div>
