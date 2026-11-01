@@ -26,22 +26,22 @@ app.get("/", (c) => {
   <title>x401 Tech | Zero-Trust Infrastructure for Autonomous Agents</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #080c14; color: #e2e8f0; margin: 0; padding: 48px 24px; line-height: 1.6; }
-    .container { max-width: 860px; margin: 0 auto; }
+    .container { max-width: 860px; margin: 0 auto; text-align: center; }
     .hero { text-align: center; margin-bottom: 36px; }
     h1 { color: #38bdf8; font-size: 2.6rem; margin-bottom: 0.4rem; letter-spacing: -0.02em; }
     .tagline { color: #94a3b8; font-size: 1.15rem; max-width: 680px; margin: 0 auto 1.6rem; }
     .badge { display: inline-block; background: #1e293b; color: #38bdf8; border: 1px solid #334155; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; font-family: monospace; }
-    .community-box { background: #0b1329; border: 1px solid #1e3a8a; border-radius: 8px; padding: 16px 20px; margin: 24px 0; color: #93c5fd; font-size: 0.98rem; text-align: center; }
-    .card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 24px; margin-top: 20px; transition: border-color 0.2s; }
+    .community-box { background: #0b1329; border: 1px solid #1e3a8a; border-radius: 8px; padding: 16px 20px; margin: 24px auto; color: #93c5fd; font-size: 0.98rem; text-align: center; max-width: 720px; }
+    .card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 28px 24px; margin: 20px auto 0; max-width: 720px; text-align: center; transition: border-color 0.2s; }
     .card:hover { border-color: #38bdf8; }
     h3 { margin-top: 0; color: #f8fafc; font-size: 1.25rem; }
-    p { margin: 8px 0 14px; color: #cbd5e1; font-size: 0.98rem; }
+    p { margin: 8px auto 14px; color: #cbd5e1; font-size: 0.98rem; max-width: 640px; }
     a { color: #38bdf8; text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
     code { background: #1e293b; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; font-family: monospace; }
-    pre { background: #0b1120; border: 1px solid #1e293b; padding: 14px; border-radius: 8px; overflow-x: auto; color: #f1f5f9; font-family: monospace; font-size: 0.86rem; }
-    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
-    .cta-btn { display: inline-block; background: #0284c7; color: #ffffff; padding: 8px 16px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; text-decoration: none; margin-top: 6px; }
+    pre { background: #0b1120; border: 1px solid #1e293b; padding: 12px 18px; border-radius: 8px; overflow-x: auto; color: #f1f5f9; font-family: monospace; font-size: 0.86rem; display: inline-block; text-align: left; max-width: 100%; box-sizing: border-box; margin: 8px auto; }
+    .grid { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 24px; }
+    .cta-btn { display: inline-block; background: #0284c7; color: #ffffff; padding: 8px 18px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; text-decoration: none; margin-top: 6px; }
     .cta-btn:hover { background: #0369a1; text-decoration: none; }
     footer { text-align: center; margin-top: 48px; color: #64748b; font-size: 0.88rem; }
   </style>
@@ -63,19 +63,25 @@ app.get("/", (c) => {
         <h3>Live Challenge Gateway</h3>
         <p>Production edge gateway issuing atomic cryptographic challenge nonces and validating AED delegation tickets for high-throughput MCP clusters.</p>
         <p>Endpoint: <code>https://auth.x401.tech/challenge</code></p>
-        <pre>curl -i https://auth.x401.tech/challenge</pre>
+        <div>
+          <pre>curl -i https://auth.x401.tech/challenge</pre>
+        </div>
       </div>
 
       <div class="card">
         <h3>Interactive Delegation Ticket Debugger & Inspector</h3>
         <p>Inspect, decode, and verify Base64URL-encoded AED tokens, ES256/EdDSA signatures, and parameter commitments in real time.</p>
-        <a class="cta-btn" href="https://401frameworks.org/debugger" target="_blank" rel="noreferrer">Open Ticket Inspector &rarr;</a>
+        <div>
+          <a class="cta-btn" href="https://401frameworks.org/debugger" target="_blank" rel="noreferrer">Open Ticket Inspector &rarr;</a>
+        </div>
       </div>
 
       <div class="card">
         <h3>AED MCP Proxy (stdio & SSE)</h3>
         <p>Drop-in zero-trust reverse proxy wrapper for any Model Context Protocol server. Intercepts incoming <code>tools/call</code> invocations, enforces parameter commitments, and blocks unauthorized actions before execution.</p>
-        <pre>npx @x401/mcp-proxy --server-origin https://api.yourdomain.com -- npx @modelcontextprotocol/server-filesystem /path</pre>
+        <div>
+          <pre>npx @x401/mcp-proxy --server-origin https://api.yourdomain.com -- npx @modelcontextprotocol/server-filesystem /path</pre>
+        </div>
       </div>
     </div>
 
